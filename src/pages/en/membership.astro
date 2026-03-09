@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { membershipTiers, contactEmail } from '../../data/pricing';
+import type { MembershipTier } from '../../data/pricing';
+---
+
+<BaseLayout title="Membership | Digital Health Slovakia">
+  
+  <div class="content-wrapper" style="padding-top: 3rem;">
+    
+    <h2 style="text-align: left; margin-bottom: 1.5rem;">Why Become a Member?</h2>
+    
+    <ul class="benefits-list" data-animate style="margin-bottom: 4rem;">
+      <li>Access to HL7 standards</li>
+      <li>Discounts on HL7 meeting registrations and educational materials</li>
+      <li>Potential permission to disclose your affiliation on products or services</li>
+      <li>Support from our international standards expert community</li>
+      <li>Ability to actively influence and Vote on standards and policy</li>
+      <li>Access to Best Practices and expert recommendations</li>
+      <li>Be the first to know about new standards releases</li>
+    </ul>
+
+    <h2 style="text-align: center; margin-bottom: 2rem;">Membership Types:</h2>
+    
+    <div class="price-grid" data-animate>
+      {membershipTiers.map((tier: MembershipTier) => (
+        <div class="price-card">
+          <h3>{tier.nameEn}</h3>
+          <span class="price-amount">
+            {tier.price} <span class="currency">{tier.currency}</span>
+          </span>
+        </div>
+      ))}
+    </div>
+
+    <div style="margin: 5rem 0; text-align: center;" data-animate>
+      <h2 style="margin-bottom: 1.5rem;">How to Become a Member?</h2>
+      <p style="font-size: 1.2rem; color: var(--text-dark);">
+        For further information about membership, please contact Digital Health Slovakia via e-mail: 
+        <a href={`mailto:${contactEmail}`} style="color: var(--purple-main); font-weight: 700; text-decoration: underline;">
+          {contactEmail}
+        </a>
+      </p>
+    </div>
+
+  </div>
+</BaseLayout>

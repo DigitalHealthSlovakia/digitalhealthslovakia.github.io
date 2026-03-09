@@ -5,13 +5,16 @@ import { newsArticles } from '../../data/news';
 const title = "News | Digital Health Slovakia";
 const today = new Date();
 
+// 1. Logic: Show if it's an "EVENT" (regardless of date) OR if the news date has passed
 const visibleNews = newsArticles
   .filter(article => {
     const articleDate = new Date(article.date);
+    // This ensures the DHS Forum stays visible even if it's in the future
     return article.category.includes("EVENT") || articleDate <= today;
   })
   .sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
 
+// 2. Pagination for the first page
 const postsPerPage = 5;
 const firstPageNews = visibleNews.slice(0, postsPerPage);
 const totalPages = Math.ceil(visibleNews.length / postsPerPage);
@@ -24,12 +27,12 @@ const totalPages = Math.ceil(visibleNews.length / postsPerPage);
       <h1>NEWS</h1>
     </header>
 
-    <div class="news-container" style="margin-top: 5rem;">
+    <div class="news-container" style="margin-top: 4rem;">
       {firstPageNews.map((article) => (
-        <div class="news-item" data-animate>
+        <div class="news-item" data-animate style="margin-bottom: 5rem;">
           <span class="news-kicker">{article.category}</span>
           
-          <p class="news-paragraph">
+          <p class="mission-p" style="margin-top: 0.5rem;">
             <span>{article.content}</span>
             
             <a href={article.link} target="_blank" class="news-inline-link">
@@ -48,6 +51,7 @@ const totalPages = Math.ceil(visibleNews.length / postsPerPage);
       ))}
     </div>
 
+    {/* Only show pagination if there is more than one page */}
     {totalPages > 1 && (
       <nav class="pagination">
         <span>Page 1 of {totalPages}</span>
@@ -58,51 +62,30 @@ const totalPages = Math.ceil(visibleNews.length / postsPerPage);
 </BaseLayout>
 
 <style>
-  .news-container {
-    max-width: 900px; /* Constrains the width so lines don't get too long */
-  }
-
-  .news-item {
-    margin-bottom: 6rem; /* More space between different news items */
-    border-left: 3px solid var(--purple-main); /* Adds a subtle vertical accent */
-    padding-left: 2rem;
-  }
-
   .news-kicker {
     display: block;
     color: var(--purple-main);
-    font-weight: 700;
-    font-size: 0.9rem;
+    font-weight: 800;
+    font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 0.15rem;
-    margin-bottom: 1.2rem; /* Pushes the paragraph down away from the hook */
+    letter-spacing: 0.1rem;
   }
-
-  .news-paragraph {
-    font-size: 1.15rem; /* Slightly larger for better readability */
-    line-height: 1.8; /* This is the key to stopping the "squished" feel */
-    color: #444;
-    font-weight: 400; /* Ensures it's not "fat" or heavy */
-  }
-
   .news-inline-link {
     color: var(--purple-main);
     text-decoration: underline;
-    text-underline-offset: 4px;
-    font-weight: 600;
-    transition: color 0.2s ease;
+    transition: opacity 0.2s ease;
   }
-
-  .news-inline-link:hover {
-    color: #000;
-  }
-
+  .news-inline-link:hover { opacity: 0.7; }
+  .news-item { border-bottom: 1px solid #eee; padding-bottom: 3rem; }
+  .news-item:last-child { border-bottom: none; }
   .pagination {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 4rem;
     padding-top: 2rem;
-    border-top: 1px solid #eee;
+    border-top: 2px solid #eee;
+    font-weight: bold;
   }
+  .pagination a { color: var(--purple-main); text-decoration: none; }
 </style>

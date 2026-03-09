@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = "Support Us | Digital Health Slovakia";
+---
+
+<BaseLayout title={title}>
+  <div class="content-wrapper" style="padding-top: 2rem;">
+    
+    <header data-animate>
+      <h1>SUPPORT OUR MISSION</h1>
+      <p class="mission-p">
+        Support the advancement of digital health standards and interoperability in Slovakia through our various engagement and funding programs.
+      </p>
+    </header>
+
+    <div class="support-grid" data-animate>
+      <section class="tax-box">
+                <h2>Donate 2% of Tax</h2>
+        <p class="support-text">
+          Under the Slovak Income Tax Act, taxpayers may designate a specific percentage of their paid income tax to a registered non-profit organization. This statutory mechanism allows individuals and legal entities to direct their tax liability toward the development of equitable, evidence-based digital health infrastructure at no additional cost.
+        </p>
+        
+        
+
+        <div class="info-card">
+          <h3>Organization Credentials for Statutory Filing</h3>
+          <div class="data-row">
+            <span>Identification Number (IČO):</span>
+            <strong>55139213</strong>
+          </div>
+          <div class="data-row">
+            <span>Legal Form:</span>
+            <strong>Občianske združenie</strong>
+          </div>
+          <div class="data-row">
+            <span>Official Name:</span>
+            <strong>Digital Health Slovakia</strong>
+          </div>
+          <div class="data-row">
+            <span>Registered Address:</span>
+            <strong>Lesná 2121/18, 900 31 Stupava</strong>
+          </div>
+          <div class="data-row">
+            <span>Registration Number:</span>
+            <strong>VVS/1-900/90-65541</strong>
+          </div>
+          <div class="data-row">
+            <span>Registered court:</span>
+            <strong>Okresný úrad Bratislava</strong>
+          </div>
+        </div>
+
+        <div class="action-area">
+          <a href="/documents/V2Pv25_DHS.pdf" class="download-btn" download>
+            Download Pre-filled Declaration (PDF)
+         </a>
+          <p class="small-note">Vyhlásenie o poukázaní podielu zaplatenej dane (V2PV25)</p>
+        </div>
+      </section>
+
+      <aside class="other-support">
+        <h3>Strategic Engagement</h3>
+        <p style="font-size: 0.9rem; color: #666; margin-bottom: 1.5rem;">
+          We offer diverse avenues for professional and corporate collaboration to drive digital transformation.
+        </p>
+        <ul class="support-list">
+          <li>
+            <strong>Event Sponsorship:</strong> 
+            Provide financial or logistical support for our conferences, seminars, and the annual Digital Health Slovakia Forum to increase your brand's visibility within the sector.
+          </li>
+          <li>
+            <strong>Expert Contribution:</strong> 
+            Lend your technical expertise to our active working groups focusing on HL7, EHDS, and international interoperability standards.
+          </li>
+          <li>
+            <strong>Membership:</strong> 
+            Join as a corporate or individual member to participate in the association's governance and gain early access to research and policy updates.
+          </li>
+        </ul>
+        <a href="/en/contact" class="text-link">Request a Partnership Proposal &rarr;</a>
+      </aside>
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .support-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 5rem;
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+  }
+
+  .support-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 2.5rem;
+  }
+
+  .info-card {
+    background-color: #fcfcfc;
+    padding: 2.5rem;
+    border: 1px solid #eee;
+    border-top: 4px solid var(--purple-main);
+    border-radius: 4px;
+  }
+
+  .info-card h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: #888;
+  }
+
+  .data-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .data-row:last-child { border-bottom: none; }
+  .data-row strong { color: #000; font-weight: 700; }
+
+  .download-btn {
+    display: inline-block;
+    background-color: var(--purple-main);
+    color: white;
+    padding: 1.2rem 2.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    transition:

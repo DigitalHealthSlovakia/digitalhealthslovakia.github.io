@@ -1,32 +1,53 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+
+const lang = Astro.url.pathname.startsWith('/sk') ? 'sk' : 'en';
+const path = Astro.url.pathname.replace(/^\/(en|sk)/, '');
+
+const nav = {
+  en: [
+    { name: "About Us", href: "/about" },
+    { name: "Membership", href: "/membership" },
+    { name: "HL7 Standards", href: "/standards" },
+    { name: "Projects", href: "/projects" },
+    { name: "News", href: "/news" },
+    { name: "Contact", href: "/contact" }
+  ],
+  sk: [
+    { name: "O nás", href: "/about" },
+    { name: "Členstvo", href: "/membership" },
+    { name: "Štandardy HL7", href: "/standards" },
+    { name: "Projekty", href: "/projects" },
+    { name: "Aktuality", href: "/news" },
+    { name: "Kontakt", href: "/contact" }
+  ]
+};
 ---
 
 <header class="site-header">
     <div class="header-container">
         <div class="logo-box">
-            <a href="/">
+            <a href={`/${lang}/about`}>
                 <img src="/images/DHS_logo.png" alt="DHS Logo" class="logo-img" />
             </a>
         </div>
 
         <nav class="main-nav">
-            <HeaderLink href="/en/about">About Us</HeaderLink>
-            <HeaderLink href="/en/membership">Membership</HeaderLink>
-            <HeaderLink href="/en/standards">HL7 Standards</HeaderLink>
-            <HeaderLink href="/en/projects">Projects</HeaderLink>
-            <HeaderLink href="/en/news">News</HeaderLink>
-            <HeaderLink href="/en/contact">Contact</HeaderLink>
+           {nav[lang].map((item) => (
+              <HeaderLink href={`/${lang}${item.href}`}>{item.name}</HeaderLink>
+           ))}
         </nav>
 
         <div class="header-actions">
-            <HeaderLink href="/en/support" class="support-purple-btn">Support Us</HeaderLink>
+            <HeaderLink href={`/${lang}/support`} class="support-purple-btn">
+                {lang === 'sk' ? 'Podporte nás (2%)' : 'Support Us'}
+            </HeaderLink>
             <div class="divider"></div>
                 <div class="flag-group">
-                    <a href="/sk">
+                    <a href={`/sk${path}`}>
                         <img src="https://flagcdn.com/w40/sk.png" alt="SK" class="nav-flag" />
                     </a>
-                    <a href="/en">
+                    <a href={`/en${path}`}>
                         <img src="https://flagcdn.com/w40/gb.png" alt="EN" class="nav-flag" />
                     </a>
                 </div>

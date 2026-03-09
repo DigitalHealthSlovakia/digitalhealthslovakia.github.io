@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "HL7 Standards | Digital Health Slovakia";
+---
+
+<BaseLayout title={title}>
+  
+  <div class="content-wrapper" style="padding-top: 2rem;">
+    
+<section class="hero-flex" data-animate style="align-items: flex-start; gap: 4rem;">
+      <div class="hero-mission-text" style="flex: 1.5;">
+        <h1>HL7 STANDARDS</h1>
+        <p class="mission-p">
+          HL7 and its members provide a framework (and related standards) for the exchange, integration, sharing, and retrieval of electronic health information. 
+        </p>
+        <p class="mission-p">
+          These standards define how information is packaged and communicated from one party to another, setting the language, structure and data types required for seamless integration between systems. HL7 standards support clinical practice and the management, delivery, and evaluation of health services, and are recognized as the most commonly used in the world.
+        </p>
+      </div>
+      
+      <div class="hl7-logo-box" style="flex: 1; display: flex; justify-content: flex-end;">
+        <img 
+          src="/images/Partneri_HL7International.jpg" 
+          alt="HL7 International Partner" 
+          class="interactive-logo"
+        />
+      </div>
+    </section>
+
+<div style="margin-top: 4rem;" data-animate>
+      <h2>HL7 International</h2>
+      <ul class="activities-list">
+        <li><span>since 1994 ANSI-accredited standards developing organization providing a comprehensive framework and related standards for the exchange, integration, sharing, and retrieval of electronic health information that supports clinical practice and the management, delivery and evaluation of health services</span></li>
+        <li><span>members from over 50 countries, including 500+ corporate members representing healthcare providers, government stakeholders, payers, pharmaceutical companies, vendors/suppliers, and consulting firms</span></li>
+        <li>
+          <span>further information about HL7 International is available on the website of <a href="https://www.hl7.org/implement/standards/index.cfm?ref=nav" target="_blank" style="color: var(--purple-main); text-decoration: underline;">HL7 International</a></span>
+        </li>
+      </ul>
+    </div>
+
+    <div style="margin-top: 3rem;" data-animate>
+      <h2>HL7 Europe</h2>
+      <ul class="activities-list">
+        <li><span>members from 22 countries</span></li>
+        <li><span>involved in major EU health interoperabiliy projects</span></li>
+        <li><span>HL7 standards (CDA, FHIR) – are used for cross-border exchange of health data for multiple use cases including ePrescription/eDispensation and Patient Summary as well as upcoming services such as eLAB, Hospital Discharge Reports, PAX, PAX Reports</span></li>
+        <li>
+          <span>additional information about HL7 Europe is available on their <a href="https://www.hl7.eu/" target="_blank" style="color: var(--purple-main); text-decoration: underline;">website</a></span>
+        </li>
+      </ul>
+    </div>
+
+    <div style="margin-top: 3rem; margin-bottom: 5rem;" data-animate>
+      <h2>Tools and Training Opportunities</h2>
+      <ul class="activities-list">
+        <li>
+          <span>Additional information about HL7 tools are available on the website of <a href="http://www.hl7.org/participate/toolsandresources.cfm" target="_blank" style="color: var(--purple-main); text-decoration: underline;">HL7 International</a></span>
+        </li>
+        <li>
+          <span>Additional information about HL7 training opportunities are available on the website of <a href="http://www.hl7.org/training/index.cfm" target="_blank" style="color: var(--purple-main); text-decoration: underline;">HL7 International</a></span>
+        </li>
+      </ul>
+    </div>
+
+    <footer style="border-top: 1px solid #eee; padding-top: 2rem; margin-top: 5rem; font-size: 0.9rem; color: #666; padding-bottom: 2rem;">
+      <p>® Health Level Seven and HL7 are registered trademarks of Health Level Seven International, registered with the United States Patent and Trademark Office.</p>
+    </footer>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .interactive-logo {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+    /* Smooth transition for the scaling and shadow */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+    cursor: pointer;
+  }
+
+  .interactive-logo:hover {
+    /* Makes it 8% larger on hover */
+    transform: scale(1.08);
+    /* Adds a subtle 'lift' effect using a shadow filter */
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+  }
+</style>

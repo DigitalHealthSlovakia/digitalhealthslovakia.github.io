@@ -45,24 +45,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 
 			/* BANNER */
 			.main-banner {
- 			    display: block;
-                width: 100%;
-                clear: both;     /* Prevents layout bleed from sections above */
-                height: auto;
-                overflow: visible;
+ 				 max-width: 900px;
+ 				 margin: 0 auto 5rem;
 			}
 
 			.main-banner img {
-  		    	display: block;
-                margin: 0 auto;
-                width: 90%; /* Instead of transform: scale(0.70) */
-                height: auto;
-                max-height: none;
-                min-height: auto;
-                flex-shrink: 0;
-                object-fit: contain;
-                aspect-ratio: auto;
-                aspect-ratio: attr(width) / attr(height);
+  				transform: scale(0.95);
 			}
 
 			/* KEY ACTIVITIES - FULL WIDTH BREAKOUT */
@@ -172,6 +160,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 				text-transform: uppercase;
 				letter-spacing: 2px;
 				margin: 4rem 0 2.5rem;
+
+			/* FULL-WIDTH BREAKOUT */
 				width: 100vw;
 				position: relative;
 				left: 50%;
@@ -250,6 +240,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 			transform 0.7s ease-out;
 		}
 
+		<script>
+		const observer = new IntersectionObserver(
+			entries => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+				entry.target.classList.add('fade-up');
+				observer.unobserve(entry.target);
+				}
+			});
+			},
+			{ threshold: 0.15 }
+		);
+
+		document.querySelectorAll('[data-animate]').forEach(el => {
+			observer.observe(el);
+		});
+		</script>
 
 
 		@media (max-width: 1024px) {
@@ -292,9 +299,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 		<main>
 			<section class="hero" data-animate>
 				<div class="hero-text">
-					<h1>NAŠA MISIA</h1>
-					<p class="mission-statement">Misiou občianskeho združenia Digital Health Slovakia je podpora štandardizácie v oblasti interoperability v slovenskom zdravotníctve.</p>
-					<p class="mission-statement">Digital Health Slovakia zastrešuje HL7 Slovensko ako zastúpenie štandardizačnej organizácie <strong>HL7 International</strong> na Slovensku.</p>
+					<h1>OUR MISSION</h1>
+					<p class="mission-statement">Digital Health Slovakia is a non-profit association focused on promoting and advancing interoperability and standardization of healthcare in Slovakia.</p>
+					<p class="mission-statement"><strong>HL7 Slovakia</strong> – the Slovak affiliate of HL7 International – is part of Digital Health Slovakia.</p>
 				</div>
 				<div class="hl7-logo-container">
 					<img src="/images/HL7_SK_logo.png" alt="HL7 Slovakia" />
@@ -302,59 +309,59 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 			</section>
 
 			<div class="main-banner">
-				<img src="/images/About_01.jpg" alt="Naša vízia je digitálne prepojená a dostupná zdravotná starostlivosť pre všetkých." />
+				<img src="/images/About_01_EN.png" alt="Digital Health Strategic Vision" />
 			</div>
 
 			<section class="activities-strip" data-animate>
 				<div class="activities-inner">
-					<h2>NAŠE AKTIVITY</h2>
+					<h2>OUR ACTIVITIES</h2>
 					<ul class="activities-list">
-					<li>Podporujeme interoperabilitu a štandardizáciu v oblasti digitálneho zdravotníctva</li>
-					<li>Podporujeme vytvorenie udržateľného zdravotníctva zameraného na občana</li>
-					<li>Budujeme komunitu používateľov štandardov v oblasti digitálneho zdravotníctva, PPP - public-private-partnerships, a Vytvárame prepojenia medzi oblasťou zdravotníctva a IT</li>
-					<li>Podporujeme vzdelávanie, vedu a výskum v oblasti zdravotníctva</li>
-					<li>Spolupracujeme so zahraničnými a slovenskými inštitúciami a organizáciami, ktoré podporujú rozvoj digitálneho zdravotníctva a interoperability v Európe a vo svete, predovšetkým so štandardizačnými a akreditačnými organizáciami ako HL7 International, HL7 Europe</li>
+					<li>support of digital health interoperability and standardisation</li>
+					<li>support of sustainable, patient centric healthcare</li>
+					<li>creating a community of digital health standards users, digital health experts and P3 stakeholders</li>
+					<li>promotion of digital health training, research, and innovation</li>
+					<li>cooperation with national and international digital health and interoperability institutions, including standards and accreditation bodies such as HL7 International and HL7 Europe</li>
 					</ul>
 				</div>
 			</section>
 
 			<section class="team-section" data-animate>
-				<h2>NÁŠ TÍM</h2>
+				<h2>OUR TEAM</h2>
 				<div class="team-grid">
 					<div class="team-card">
 						<img src="/images/Tim_ESa.png" alt="Eva Sabajová" />
 						<h3>Eva Sabajová</h3>
-						<p>Prezidentka</p>
+						<p>President</p>
 					</div>
 					<div class="team-card">
 						<img src="/images/Tim_MJu.png" alt="Michal Juhás" />
 						<h3>Michal Juhás</h3>
-						<p>Viceprezident</p>
+						<p>Vice-President</p>
 					</div>
 					<div class="team-card">
 						<img src="/images/Tim_JKa.jfif" alt="Jozef Kalužay" />
 						<h3>Jozef Kalužay</h3>
-						<p>Člen prezídia</p>
+						<p>Executive Council</p>
 					</div>
 					<div class="team-card">
 						<img src="/images/Tim_JJa.png" alt="Jakub Jamnický" />
 						<h3>Jakub Jamnický</h3>
-						<p>Predseda technickej komisie</p>
+						<p>Technical Chair</p>
 					</div>
 					<div class="team-card">
 						<img src="/images/Tim_DEt.png" alt="Dmitry Etin" />
 						<h3>Dmitry Etin</h3>
-						<p>Technický poradca</p>
+						<p>Technical Advisor</p>
 					</div>
 				</div>
 			</section>
 
 				<section class="partners-section" data-animate>
-					<h2>PARTNERI</h2>
+					<h2>OUR PARTNERS</h2>
 				
 				<div class="divider-bar">
   					<div class="divider-inner">
-  						  Členovia Digital Health Slovakia
+  						  Members of Digital Health Slovakia
 					</div>
 				</div>
 				
@@ -414,21 +421,21 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 				      </div>
 				    </a>
 
-			    	<a href="https://biobankslovakia.jlfuk.sk/" target="_blank" rel="noopener">
+			    	<a href="https://biobankslovakia.jlfuk.sk/en/biobankslovakia_en/" target="_blank" rel="noopener">
 			     	 <div class="logo-item">
 			        	<div class="logo-container">
-			          	<img src="/images/Clenovia_JLF_SK.png" alt="Biobanka pre nádorové a zriedkavé ochorenia">
+			          	<img src="/images/Clenovia_JLF_EN.png" alt="The Biobank for Cancer and Rare Diseases">
 			        	</div>
-			    	    <span class="logo-label">Biobanka pre nádorové a zriedkavé ochorenia</span>
+			    	    <span class="logo-label">The Biobank for Cancer and Rare Diseases</span>
 				      </div>
-				    </a>					
+				    </a>
 
-				</div>
+				  </div>
 
 
 				<div class="divider-bar">
   					<div class="divider-inner">
-  						  Digital Health Slovakia je Členom
+  						  Digital Health Slovakia is a Member of
 					</div>
 				</div>
 
@@ -463,7 +470,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 
 				<div class="divider-bar">
   					<div class="divider-inner">
-  						  Založenie HL7 Slovensko pri OZ Digital Health Slovakia podporili zástupcovia
+  						  Digital Health Slovakia is Supported By
 					</div>
 				</div>
 
@@ -474,7 +481,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
   				    <div class="logo-container">
  				       <img src="/images/Clenovia_LFUK.png" alt="Lekárska fakulta Univerzity Komenského">
   				    </div>
-  				    <span class="logo-label">Lekárska fakulta Univerzity Komenského</span>
+  				    <span class="logo-label">Faculty of Medicine, Comenius University</span>
  				   </div>
 				  </a>
 
@@ -499,9 +506,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
  				 <a href="https://www.nczisk.sk/" target="_blank" rel="noopener">
   				  <div class="logo-item">
   				    <div class="logo-container">
-   				     <img src="/images/Podporili_NCZI.png" alt="Národné centrum zdravotníckych informácií">
+   				     <img src="/images/Podporili_NCZI.png" alt="NCZI">
    				   </div>
-   				   <span class="logo-label">Národné centrum zdravotníckych informácií</span>
+   				   <span class="logo-label">National Health Information Center</span>
   				  </div>
  				 </a>
 
@@ -517,9 +524,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
  				 <a href="https://health.gov.sk/" target="_blank" rel="noopener">
   				  <div class="logo-item">
    			    <div class="logo-container">
-    			     <img src="/images/Podporili_MZSR.gif" alt="Ministerstvo zdravotníctva Slovenskej republiky">
+    			     <img src="/images/Podporili_MZSR.gif" alt="Ministry of Health of the Slovak Republic">
    			    </div>
-   			    <span class="logo-label">Ministerstvo zdravotníctva Slovenskej republiky</span>
+   			    <span class="logo-label">Ministry of Health of the Slovak Republic</span>
    			  </div>
   			 </a>
 
@@ -557,8 +564,5 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 			observer.observe(el);
 		});
 		</script>
-
-
-        
 
         </BaseLayout>
