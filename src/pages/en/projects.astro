@@ -1,108 +1,82 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { newsArticles } from '../../data/news';
-
-const title = "News | Digital Health Slovakia";
-const today = new Date();
-
-const visibleNews = newsArticles
-  .filter(article => {
-    const articleDate = new Date(article.date);
-    return article.category.includes("EVENT") || articleDate <= today;
-  })
-  .sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
-
-const postsPerPage = 5;
-const firstPageNews = visibleNews.slice(0, postsPerPage);
-const totalPages = Math.ceil(visibleNews.length / postsPerPage);
+const title = "Projects | Digital Health Slovakia";
+const description = "Discover the international and national initiatives led by Digital Health Slovakia.";
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} description={description}>
+  
   <div class="content-wrapper" style="padding-top: 2rem;">
     
     <header data-animate>
-      <h1>NEWS</h1>
+      <h1>CURRENT PROJECTS</h1>
+      <p class="mission-p">
+        Digital Health Slovakia is actively involved in several international and national initiatives.
+      </p>
     </header>
 
-    <div class="news-container" style="margin-top: 5rem;">
-      {firstPageNews.map((article) => (
-        <div class="news-item" data-animate>
-          <span class="news-kicker">{article.category}</span>
-          
-          <p class="news-paragraph">
-            <span>{article.content}</span>
-            
-            <a href={article.link} target="_blank" class="news-inline-link">
-              <strong>{article.linkText}</strong>
-            </a>
+    <section style="margin-top: 4rem;" data-animate>
+      <div style="margin-bottom: 2rem;">
+        <h2>XiA Project</h2>
+        <p class="mission-p">
+          The Xpanding Innovative Alliance (XiA) is a European initiative focused on the practical implementation of the European Health Data Space (EHDS). The project addresses the technical and professional challenges of interoperability by developing a specialized pedagogical framework and micro-credentials. By centering our efforts on the European Electronic Health Record Exchange Format (EEHRxF), XiA provides the training infrastructure and accreditation necessary for IT professionals and healthcare providers to operate within a unified, cross-border digital health ecosystem.
+        </p>
+      </div>
 
-            {article.additionalText && <span>{article.additionalText}</span>}
+      <div style="display: flex; justify-content: center;">
+        <a href="https://xia-project.iscte-iul.pt/" target="_blank" rel="noopener noreferrer" class="project-image-link">
+          <img 
+            src="/images/XiA-Launch_Surveys-1024x577.png" 
+            alt="XIA Project Website" 
+            class="project-banner cinematic-lift"
+          />
+        </a>
+      </div>
+    </section>
 
-            {article.secondaryLink && (
-              <a href={article.secondaryLink} target="_blank" class="news-inline-link">
-                {article.secondaryLinkText}
-              </a>
-            )}
-          </p>
-        </div>
-      ))}
-    </div>
+    <div style="margin-bottom: 8rem;"></div>
 
-    {totalPages > 1 && (
-      <nav class="pagination">
-        <span>Page 1 of {totalPages}</span>
-        <a href="/en/news/2">Older News &rarr;</a>
-      </nav>
-    )}
   </div>
 </BaseLayout>
 
 <style>
-  .news-container {
-    max-width: 900px; /* Constrains the width so lines don't get too long */
-  }
-
-  .news-item {
-    margin-bottom: 6rem; /* More space between different news items */
-    border-left: 3px solid var(--purple-main); /* Adds a subtle vertical accent */
-    padding-left: 2rem;
-  }
-
-  .news-kicker {
+  .project-banner {
+    /* SIZING RESTORED */
+    width: 100%;
+    max-width: 900px; 
+    height: auto;
+    border-radius: 15px;
+    
+    /* GLOBAL STYLE OVERRIDE */
     display: block;
-    color: var(--purple-main);
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15rem;
-    margin-bottom: 1.2rem; /* Pushes the paragraph down away from the hook */
+    margin: 0 auto;
+    
+    /* THE CINEMATIC BASE */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: 
+      transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+      box-shadow 0.5s ease;
   }
 
-  .news-paragraph {
-    font-size: 1.15rem; /* Slightly larger for better readability */
-    line-height: 1.8; /* This is the key to stopping the "squished" feel */
-    color: #444;
-    font-weight: 400; /* Ensures it's not "fat" or heavy */
+  .project-image-link {
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
   }
 
-  .news-inline-link {
-    color: var(--purple-main);
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    font-weight: 600;
-    transition: color 0.2s ease;
+  /* THE HOVER */
+  .project-image-link:hover .project-banner {
+    /* Scale + Lift */
+    transform: scale(1.03) translateY(-10px);
+    
+    /* Deep Purple Glow shadow using your brand variable */
+    box-shadow: 0 30px 60px rgba(75, 0, 130, 0.25);
   }
 
-  .news-inline-link:hover {
-    color: #000;
-  }
-
-  .pagination {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 1px solid #eee;
+  /* Ensuring the text doesn't look weird when the image is centered */
+  @media (max-width: 768px) {
+    header, h2 {
+      text-align: center;
+    }
   }
 </style>
