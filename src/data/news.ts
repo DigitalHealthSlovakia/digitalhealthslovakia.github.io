@@ -53,9 +53,7 @@ export const newsArticles: NewsItem[] = [
       en: 'Digital Health Slovakia organized the Digital Health Slovakia Forum 2026 in Bratislava, bringing together digital health experts and stakeholders from 13 countries. The programme featured practical experiences from digital health transformation across Europe and focused on interoperability, HL7 FHIR, SNOMED CT and EHDS implementation in Slovakia.',
     },
     link: 'https://dhsforum.com/',
-    linkText: { sk: 'Navštíviť stranku fóra', en: 'Visit Forum Website' },
-    secondaryLink: 'https://www.tickettailor.com/events/ehdssolutions/2060538',
-    secondaryLinkText: { sk: 'Kúpiť lístky / Registrácia', en: 'Buy Tickets / Register' },
+    linkText: { sk: 'Navštíviť stránku fóra', en: 'Visit Forum Website' },
     images: ['/images/DHS_Forum_2026.jpg'],
   },
   {
@@ -140,7 +138,6 @@ export const newsArticles: NewsItem[] = [
     date: '2026-09-09',
     displayDate: { sk: '9.–11. september 2026', en: 'September 9–11, 2026' },
     categoryKey: 'CONFERENCE',
-    isUpcoming: true,
     title: {
       sk: 'EHDS a vzdelávanie v oblasti interoperability na Public Health Conference 2026',
       en: 'EHDS and Interoperability Education at Public Health Conference 2026',
