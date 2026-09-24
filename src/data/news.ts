@@ -168,4 +168,28 @@ export const newsArticles: NewsItem[] = [
     linkText: { sk: 'Zobraziť detail na LinkedIn', en: 'View details on LinkedIn' },
     images: ['/images/HospitalsOnFHIR_2026.gif'],
   },
+  {
+    id: 'xia-community-of-practice-launch-2026',
+    date: '2026-09-23',
+    displayDate: { sk: '23. september 2026', en: 'September 23, 2026' },
+    categoryKey: 'ANNOUNCEMENT',
+    title: {
+      sk: 'Tlačová správa: Projekt XiA spustil Komunitu praxe na podporu zručností v oblasti interoperability v digitálnom zdravotníctve',
+      en: 'Press Release: XiA launches its Community of Practice to support Europe’s digital health interoperability skills',
+    },
+    description: {
+      sk: 'Projekt XiA (Xpanding Innovative Alliance) oficiálne spúšťa svoju Komunitu praxe (Community of Practice) – nový európsky priestor spájajúci odborníkov, vzdelávacie inštitúcie, poskytovateľov zdravotnej starostlivosti a tvorcov politík s cieľom posilniť zručnosti potrebné na implementáciu interoperabilného digitálneho zdravotníctva a prípravu na EHDS.',
+      en: 'The XiA - Xpanding Innovative Alliance project is launching its Community of Practice, a new European collaborative space designed to bring together professionals, educators, researchers, public authorities, and healthcare organizations around shared interoperability skills for the European Health Data Space.',
+    },
+    link: '/documents/20260923_PressRelease_XiA.pdf',
+    linkText: {
+      sk: 'Stiahnuť tlačovú správu (PDF)',
+      en: 'Download Press Release (PDF)',
+    },
+    secondaryLink: 'https://xia-project.iscte-iul.pt/',
+    secondaryLinkText: {
+      sk: 'Navštíviť web projektu XiA',
+      en: 'Visit XiA Project Website',
+    },
+  },
 ];
