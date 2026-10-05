@@ -134,6 +134,26 @@ export const newsArticles: NewsItem[] = [
     images: ['/images/WHO_GIDH_2026.jpg'],
   },
   {
+    id: 'lekarske-noviny-digitalisation-2026',
+    date: '2026-09-01',
+    displayDate: { sk: '1. september 2026', en: 'September 1, 2026' },
+    categoryKey: 'ANNOUNCEMENT',
+    title: {
+      sk: 'Úvod do digitalizácie zdravotníctva na Slovensku – Kde sme a kam smerujeme?',
+      en: 'Introduction to Digitalisation of Healthcare in Slovakia: Where Are We and Where Are We Heading?',
+    },
+    description: {
+      sk: 'V najnovšom vydaní Lekárskych novín Michal Juhásp predstavil úvod k aktuálnemu stavu digitalizácie zdravotníctva na Slovensku, prechodu na eHealth 2.0, projektu RISEZ a výziev spojených s implementáciou Európskeho priestoru pre zdravotné údaje (EHDS). Prepojenie týchto iniciatív prináša jedinečnú šancu na modernizáciu nášho zdravotného systému.',
+      en: 'In the latest issue of Lekárske noviny, Michal Juhás introduced the current state of digital health transformation in Slovakia, the transition to eHealth 2.0, the RISEZ project, and the implementation of the European Health Data Space (EHDS). Connecting these parallel initiatives creates a rare opportunity to modernize our healthcare system.',
+    },
+    link: 'https://lnkd.in/p/d5sTKBJg',
+    linkText: {
+      sk: 'Zobraziť príspevok na LinkedIn',
+      en: 'View LinkedIn Post',
+    },
+    images: ['/images/20260901_202605_LekarskeNoviny.jfif'],
+  },
+  {
     id: 'phc-2026',
     date: '2026-09-09',
     displayDate: { sk: '9.–11. september 2026', en: 'September 9–11, 2026' },
@@ -149,6 +169,32 @@ export const newsArticles: NewsItem[] = [
     link: 'https://v4phc2026.org',
     linkText: { sk: 'V4 PHC 2026 – Healthy Horizons', en: 'V4 PHC 2026 – Healthy Horizons' },
     images: ['/images/PHC_2026.png'],
+  },
+ {
+    id: 'ehds-semantic-interoperability-workshop-2026',
+    date: '2026-09-10',
+    displayDate: { sk: '25. september 2026', en: 'September 25, 2026' },
+    categoryKey: 'EVENT',
+    isUpcoming: false,
+    title: {
+      sk: 'Panelová diskusia k sémantickej interoperabilite v rámci EHDS',
+      en: 'EHDS Semantic Interoperability Panel Discussion',
+    },
+    description: {
+      sk: 'Digital Health Slovakia zorganizovala tematický workshop zameraný na pokrok v sémantickej interoperabilite a harmonizácii údajov pri implementácii EHDS. Pod vedením Evy Sabajovej diskutovali poprední európski odborníci z TEHIK, HSE a MedCom o štandardoch, potrebných kompetenciách a reálnych skúsenostiach z praxe.',
+      en: 'Digital Health Slovakia organized a thematic workshop focusing on advancing semantic interoperability and data harmonisation in EHDS implementation. Chaired by Eva Sabajova, leading European experts from TEHIK, HSE, and MedCom discussed standards, required competencies, and real-world implementation experiences.',
+    },
+    link: 'https://lnkd.in/eMShHhmt',
+    linkText: {
+      sk: 'Registračná stránka podujatia',
+      en: 'Event Registration Page',
+    },
+    secondaryLink: 'https://lnkd.in/p/da-HuxPe',
+    secondaryLinkText: {
+      sk: 'Zobraziť príspevok na LinkedIn',
+      en: 'View LinkedIn Post',
+    },
+    images: ['/images/20260910_EEHRxF_Theamtic_Workshop.jfif'],
   },
   {
     id: 'hospitals-fhir-pisa-2026',
@@ -191,5 +237,45 @@ export const newsArticles: NewsItem[] = [
       sk: 'Navštíviť web projektu XiA',
       en: 'Visit XiA Project Website',
     },
+  },
+  {
+    id: 'eehrxf-thematic-workshop-semantic-interoperability-2026',
+    date: '2026-09-24',
+    displayDate: { sk: '24. september 2026', en: 'September 24, 2026' },
+    categoryKey: 'EVENT',
+    title: {
+      sk: 'Tematický workshop EEHRxF č. 2: Sémantická interoperabilita a harmonizácia údajov',
+      en: 'EEHRxF Thematic Workshop #2: Semantic Interoperability and Data Harmonisation',
+    },
+    description: {
+      sk: 'V predvečer druhého tematického workshopu EEHRxF sa diskusia zamerala na kľúčovú otázku: čo je potrebné na to, aby boli zdravotné údaje skutočne interoperabilné? Eva Sabajová priblížila výzvy v oblasti sémantickej interoperability, validácie a potreby budovania kapacít v spolupráci s odborníkmi z Írska, Dánska a Estónska.',
+      en: 'Ahead of the second EEHRxF thematic workshop, the discussion focused on a core question: what does it take to make health data truly interoperable? Eva Sabajova highlighted challenges in semantic interoperability, validation, and capacity building alongside experts from Ireland, Denmark, and Estonia.',
+    },
+    link: 'https://lnkd.in/p/d2r2GKXY',
+    linkText: {
+      sk: 'Zobraziť príspevok na LinkedIn',
+      en: 'View LinkedIn Post',
+    },
+    images: ['/images/20260924_EEHRxF_TheamticWorkshop.jfif'],
+  },
+  {
+    id: 'eehrxf-support-centre-workshop-highlights-2026',
+    date: '2026-10-01',
+    displayDate: { sk: '1. október 2026', en: 'October 1, 2026' },
+    categoryKey: 'EVENT',
+    title: {
+      sk: 'Zhrnutie tematického workshopu EEHRxF: Sémantická interoperabilita a harmonizácia údajov',
+      en: 'EEHRxF Support Centre Workshop Highlights Semantic Interoperability and Data Harmonisation',
+    },
+    description: {
+      sk: 'Druhý tematický workshop Podporného centra EEHRxF, ktorý privítal viac ako 170 účastníkov z celej Európy, priniesol cenné poznatky o sémantickej interoperabilite v rámci EHDS. Diskusia sa zamerala na úlohu štandardov, terminologické služby a výmenu praktických skúseností s podporou odborníkov vrátane Evy Sabajovej.',
+      en: 'The second EEHRxF Support Centre thematic workshop, which included over 170 participants across Europe, highlighted key insights on semantic interoperability under the EHDS. Discussions focused on the role of standards, terminology services, and practical implementation experiences with contributions from expert panelists including Eva Sabajová.',
+    },
+    link: 'https://lnkd.in/p/dWk4f6Xa',
+    linkText: {
+      sk: 'Zobraziť príspevok na LinkedIn',
+      en: 'View LinkedIn Post',
+    },
+    images: ['/images/20261001_EEHRxF_TheamticWorkshop.jfif'],
   },
 ];
