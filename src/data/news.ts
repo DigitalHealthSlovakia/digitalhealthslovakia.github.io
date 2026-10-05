@@ -151,7 +151,7 @@ export const newsArticles: NewsItem[] = [
       sk: 'Zobraziť príspevok na LinkedIn',
       en: 'View LinkedIn Post',
     },
-    images: ['/images/20260901_202605_LekarskeNoviny.jfif'],
+    images: ['/images/20260901_202605_LekarskeNoviny.jpg'],
   },
   {
     id: 'phc-2026',
@@ -194,7 +194,7 @@ export const newsArticles: NewsItem[] = [
       sk: 'Zobraziť príspevok na LinkedIn',
       en: 'View LinkedIn Post',
     },
-    images: ['/images/20260910_EEHRxF_Theamtic_Workshop.jfif'],
+    images: ['/images/20260910_EEHRxF_ThematicWorkshop.jpg'],
   },
   {
     id: 'hospitals-fhir-pisa-2026',
@@ -256,7 +256,7 @@ export const newsArticles: NewsItem[] = [
       sk: 'Zobraziť príspevok na LinkedIn',
       en: 'View LinkedIn Post',
     },
-    images: ['/images/20260924_EEHRxF_TheamticWorkshop.jfif'],
+    images: ['/images/20260924_EEHRxF_ThematicWorkshop.jpg'],
   },
   {
     id: 'eehrxf-support-centre-workshop-highlights-2026',
@@ -276,6 +276,6 @@ export const newsArticles: NewsItem[] = [
       sk: 'Zobraziť príspevok na LinkedIn',
       en: 'View LinkedIn Post',
     },
-    images: ['/images/20261001_EEHRxF_TheamticWorkshop.jfif'],
+    images: ['/images/20261001_EEHRxF_ThematicWorkshop.jpg'],
   },
 ];
