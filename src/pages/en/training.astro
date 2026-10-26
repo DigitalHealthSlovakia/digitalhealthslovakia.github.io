@@ -1,0 +1,289 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "HL7 FHIR Fundamentals Training | Digital Health Slovakia";
+---
+
+<BaseLayout title={title}>
+  <div class="content-wrapper" style="padding-top: 2rem;">
+    
+    <!-- Hero Section with Description & Sidebar Summary Box -->
+    <section class="hero-flex" data-animate style="align-items: flex-start; gap: 3rem;">
+      
+      <!-- Left Column: Course Overview -->
+      <div class="hero-mission-text" style="flex: 1.6;">
+        <h1>HL7® FHIR® FUNDAMENTALS</h1>
+        <p class="mission-p" style="font-weight: 500; font-size: 1.1rem; color: var(--purple-main);">
+          Learn by Doing
+        </p>
+        <p class="mission-p">
+          The <strong>HL7® FHIR® Fundamentals</strong> course is a six-week online course that provides an in-depth overview of HL7 Fast Healthcare Interoperability Resources (FHIR) standard. Featuring live, hands-on exercises on how to implement HL7 FHIR, this is an ideal opportunity to apply newly gained knowledge.
+        </p>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem;">At the end of the course, participants will be able to:</h3>
+        <ul class="activities-list">
+          <span>Read the FHIR specification and know how it is organized</span>
+          <span>Understand the concept of resource and the different interoperability paradigms supported by FHIR</span>
+          <span>Comprehend the use of controlled vocabularies, master files, and entity registries in FHIR</span>
+          <span>Read and write FHIR resources</span>
+          <span>Understand FHIR profiles and constraints and the use of extensions</span>
+          <span>Understand the use of REST in FHIR, FHIR documents, transactions and messaging</span>
+          <span>Understand the implications of the EHDS regulation implementation in Slovakia</span>
+          <span>Understand the HL7 Europe Implementation Guides</span>
+        </ul>
+
+        <h3 style="margin-top: 2.5rem; margin-bottom: 1rem;">Web-Based Training</h3>
+        <ul class="activities-list">
+          <span>Instructors are HL7 subject matter experts with working experience with FHIR standard</span>
+          <span>All course materials are available electronically</span>
+          <span>Discussion forums promote student engagement and interaction</span>
+          <span>Practical exercises within each module help students apply what they have learned</span>
+          <span>Bilingual tutors are accessible throughout the course and provide evaluations and feedback on each module</span>
+        </ul>
+
+        <h3 style="margin-top: 2.5rem; margin-bottom: 1rem;">Prerequisites</h3>
+        <ul class="activities-list">
+          <span>No previous experience with FHIR or other HL7 standards is needed</span>
+          <span>Familiarity with XML or JSON and some background in software development is recommended</span>
+        </ul>
+      </div>
+      
+      <!-- Right Column: Course Summary Sidebar Box -->
+      <div class="course-sidebar-box" data-animate style="flex: 1; background: #f9f9fb; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; position: sticky; top: 2rem;">
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+          <img 
+            src="/images/HL7_FHIR_logo.png" 
+            alt="HL7 FHIR Logo" 
+            class="interactive-logo"
+            style="max-width: 220px; margin: 0 auto;"
+          />
+        </div>
+
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; border-bottom: 2px solid var(--purple-main); padding-bottom: 0.5rem;">COURSE SUMMARY</h3>
+        
+        <div style="font-size: 0.95rem; line-height: 1.6; color: #333;">
+          <p style="margin-bottom: 1rem;"><strong>NAME:</strong><br/>HL7® FHIR® Fundamentals</p>
+          <p style="margin-bottom: 1rem;"><strong>NEXT START DATE:</strong><br/>February to March 2027</p>
+          <p style="margin-bottom: 1rem;"><strong>LANGUAGE:</strong><br/>English instruction and course materials<br/>Slovak/English tutors and discussion forums</p>
+          <p style="margin-bottom: 1rem;"><strong>FORMAT:</strong><br/>Modular online course</p>
+          <p style="margin-bottom: 1rem;"><strong>CERTIFICATION:</strong><br/>Upon completion of the training, participants receive the "FHIR Fundamentals" certificate from HL7 International, provided the exercises and quizzes that are part of the individual modules are passed.</p>
+          
+          <div style="background: #fff; padding: 1rem; border-radius: 8px; border: 1px solid #cbd5e1; margin-top: 1.5rem;">
+            <p style="margin-bottom: 0.5rem;"><strong>COST:</strong></p>
+            <p style="margin-bottom: 0.25rem;">• <strong>EUR 790</strong> for Digital Health Slovakia Members</p>
+            <p style="margin-bottom: 0.5rem;">• <strong>EUR 980</strong> for Non-Members</p>
+            <p style="font-size: 0.8rem; color: #666; font-style: italic; margin-top: 0.5rem;">Občianske združenie Digital Health Slovakia is not a payer of DPH.</p>
+          </div>
+
+          <div style="background: #eff6ff; padding: 1rem; border-radius: 8px; border: 1px solid #bfdbfe; margin-top: 1rem;">
+            <p style="font-size: 0.9rem; color: #1e40af; margin: 0;">
+              <strong>EARLY-BIRD REGISTRATION DISCOUNT:</strong> Attendees who register and complete payment before end of November 2026 are eligible for a <strong>10% discount</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section style="margin-top: 5rem;" data-animate>
+      <h2>Program of Weekly Modules</h2>
+      
+      <div class="modules-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+        
+        <div class="module-card">
+          <h3>MODULE 1 — INTRODUCTION</h3>
+          <ul>
+            <li>Why FHIR / Core principles</li>
+            <li>Information sources</li>
+            <li>FHIR status / Next steps</li>
+            <li>What is a resource? Types of resources</li>
+            <li>Key parts / Composition / Elements</li>
+            <li>Resource reference</li>
+          </ul>
+        </div>
+
+        <div class="module-card">
+          <h3>MODULE 2 — RESTful FHIR</h3>
+          <ul>
+            <li>What is REST / Why REST?</li>
+            <li>Resource identity / Metadata</li>
+            <li>Versions / Conformance</li>
+            <li>Create / Update / Delete a resource</li>
+            <li>Non-CRUD operations / Search</li>
+          </ul>
+        </div>
+
+        <div class="module-card">
+          <h3>MODULE 3 — FHIR PARADIGMS</h3>
+          <ul>
+            <li>Transactions / Messages / Documents</li>
+            <li>Relationship with CDA R2</li>
+            <li>FHIR Architectural Approaches</li>
+          </ul>
+        </div>
+
+        <div class="module-card">
+          <h3>MODULE 4 — PROFILES / CONFORMANCE</h3>
+          <ul>
+            <li>Need for profiles / Profiling a resource</li>
+            <li>Extension definition / Constraints</li>
+            <li>Conformance levels</li>
+          </ul>
+        </div>
+
+        <div class="module-card">
+          <h3>MODULE 5 — EHDS IMPLEMENTATION</h3>
+          <ul>
+            <li>Introduction to the EHDS Regulation</li>
+            <li>Implications of EHDS Implementation in Slovakia</li>
+            <li>European Electronic Health Record Exchange Format (EEHRxF)</li>
+          </ul>
+        </div>
+
+        <div class="module-card">
+          <h3>MODULE 6 — HL7 EUROPE IMPLEMENTATION GUIDES</h3>
+          <ul>
+            <li>Core / Base IGs</li>
+            <li>Specific IGs for priority EHDS Use Cases</li>
+            <li>Practical use of IGs and national adaptations</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section id="register" style="margin-top: 6rem; background: #f8fafc; padding: 3rem 2rem; border-radius: 16px; border: 1px solid #e2e8f0;" data-animate>
+      <div style="max-width: 700px; margin: 0 auto;">
+        <h2 style="text-align: center; margin-bottom: 1rem;">Course Pre-Registration</h2>
+        <p style="text-align: center; color: #555; margin-bottom: 2rem;">
+          Fill out the form below to pre-register. Once submitted, a representative from Digital Health Slovakia will follow up with payment details to finish the registration.
+        </p>
+
+        <!-- Web3Forms Form -->
+        <form action="https://api.web3forms.com/submit" method="POST" class="registration-form">
+          <!-- Replace with your Web3Forms Access Key -->
+          <input type="hidden" name="access_key" value="85beac9e-cdf5-4d25-b5e0-898c2d1043f1" />
+          <input type="hidden" name="subject" value="New FHIR Fundamentals Course Pre-Registration (EN)" />
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name" />
+          </div>
+
+          <div class="form-group">
+            <label for="entity">Company / Organization or Individual *</label>
+            <input type="text" id="entity" name="entity" required placeholder="Company name or Individual" />
+          </div>
+
+          <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="+421 ..." />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Comment / Question (Optional)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Any additional questions or details..."></textarea>
+          </div>
+
+          <!-- GDPR Consent Checkbox -->
+          <div class="form-group-checkbox" style="display: flex; align-items: flex-start; gap: 0.75rem; margin: 1.5rem 0;">
+            <input type="checkbox" id="gdpr" name="gdpr_consent" required style="margin-top: 0.25rem;" />
+            <label for="gdpr" style="font-size: 0.9rem; color: #444; line-height: 1.5;">
+              I consent to the processing of my personal data for the purpose of handling this pre-registration and subsequent follow-up communication by Digital Health Slovakia in compliance with the GDPR and applicable laws. *
+            </label>
+          </div>
+
+          <button type="submit" class="submit-btn" style="width: 100%; padding: 1rem; background: var(--purple-main); color: white; border: none; border-radius: 8px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: background 0.3s ease;">
+            Submit Pre-Registration
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Trademark -->
+    <footer style="border-top: 1px solid #eee; padding-top: 2rem; margin-top: 5rem; font-size: 0.9rem; color: #666; padding-bottom: 2rem;">
+      <p>&reg; Health Level Seven and HL7 are registered trademarks of Health Level Seven International, registered with the United States Patent and Trademark Office.</p>
+    </footer>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .interactive-logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+  }
+  .interactive-logo:hover {
+    transform: scale(1.06);
+    filter: drop-shadow(0 8px 12px rgba(0,0,0,0.1));
+  }
+  .modules-grid .module-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .modules-grid .module-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+  }
+  .modules-grid h3 {
+    font-size: 1.1rem;
+    color: var(--purple-main);
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid #edf2f7;
+    padding-bottom: 0.5rem;
+  }
+  .modules-grid ul {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+    font-size: 0.92rem;
+    color: #4a5568;
+    line-height: 1.5;
+  }
+  .modules-grid li {
+    margin-bottom: 0.35rem;
+  }
+  .registration-form .form-group {
+    margin-bottom: 1.25rem;
+  }
+  .registration-form label {
+    display: block;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+  }
+  .registration-form input[type="text"],
+  .registration-form input[type="email"],
+  .registration-form input[type="tel"],
+  .registration-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .registration-form input:focus,
+  .registration-form textarea:focus {
+    outline: none;
+    border-color: var(--purple-main);
+    box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.15);
+  }
+  .submit-btn:hover {
+    opacity: 0.92;
+  }
+</style>

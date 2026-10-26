@@ -278,4 +278,30 @@ export const newsArticles: NewsItem[] = [
     },
     images: ['/images/20261001_EEHRxF_ThematicWorkshop.jpg'],
   },
+  {
+    id: 'hl7-fhir-fundamentals-course-2027',
+    date: '2027-02-08',
+    displayDate: { 
+      sk: '8. február 2027', 
+      en: 'February 8, 2027' 
+    },
+    categoryKey: 'TRAINING',
+    featured: true,
+    isUpcoming: true,
+    title: {
+      sk: 'Spustená registrácia: Kurz HL7® FHIR® Fundamentals (Február – Marec 2027)',
+      en: 'Registration Now Open: HL7® FHIR® Fundamentals Course (February – March 2027)',
+    },
+    description: {
+      sk: 'Otvorená predbežná registrácia na medzinárodne uznávaný 6-týždňový online kurz HL7® FHIR® Fundamentals (február – marec 2027). Získajte praktické zručnosti v oblasti zdravotníckej interoperability a prípravy na EHDS pod vedením odborníkov. Nezabudnite: Pri registrácii a úhrade do konca novembra 2026 získate 10% zľavu!',
+      en: 'Pre-registration is now open for the six-week online HL7® FHIR® Fundamentals course running from February to March 2027. Master health data interoperability and EHDS practical implementation with expert guidance. Take advantage of our 10% early-bird discount by registering and completing payment before the end of November 2026!',
+    },
+    link: 'https://digitalhealthslovakia.com/sk/training/',
+    linkText: { 
+      sk: 'Zistiť viac a zaregistrovať sa', 
+      en: 'Learn More and Register' 
+    },
+    images: ['/images/HL7_FHIR_logo.png'],
+  },
+ 
 ];
