@@ -201,7 +201,7 @@ export const newsArticles: NewsItem[] = [
     date: '2026-10-19',
     displayDate: { sk: '19.–21. október 2026', en: 'October 19–21, 2026' },
     categoryKey: 'EVENT',
-    isUpcoming: true,
+    isUpcoming: false,
     title: {
       sk: 'Hospitals on FHIR User Days 2026 v Pise',
       en: 'Hospitals on FHIR User Days 2026 in Pisa',
