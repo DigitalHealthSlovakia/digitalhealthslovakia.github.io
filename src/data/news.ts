@@ -303,5 +303,46 @@ export const newsArticles: NewsItem[] = [
     },
     images: ['/images/HL7_FHIR_logo.png'],
   },
+  {
+    id: 'digital-health-slovakia-mladi-lekari-memorandum-2026',
+    date: '2026-10-30',
+    displayDate: { sk: '30. október 2026', en: 'October 30, 2026' },
+    categoryKey: 'PARTNERSHIP',
+    title: {
+      sk: 'Digital Health Slovakia spája sily s komunitou Mladí lekári',
+      en: 'Digital Health Slovakia Joins Forces with the Young Doctors Community',
+    },
+    description: {
+      sk: 'Digital Health Slovakia podpísalo Memorandum o spolupráci s Inštitútom mladých lekárov (Mladí lekári). Cieľom partnerstva je zapojiť lekárov z praxe do digitálnej transformácie zdravotníctva, presadiť, aby digitalizácia lekárom prácu zjednodušovala a nepridávala administratívu, a priniesť hlas mladých odborníkov do diskusií o EHDS, umelej inteligencii a interoperabilite.',
+      en: 'Digital Health Slovakia has signed a Memorandum of Cooperation with the Inštitút mladých lekárov (Young Doctors) community. The partnership aims to involve practicing physicians in the digital health transformation, ensure that digitalisation reduces rather than adds administrative burden, and bring the voice of young professionals into discussions on the EHDS, AI, and interoperability.',
+    },
+    link: 'https://www.linkedin.com/posts/eva-sabajova-234b4464_ehds-ai-zdravotnictvo-share-7521896979493253120-7OE5/',
+    linkText: {
+      sk: 'Zobraziť príspevok na LinkedIn',
+      en: 'View LinkedIn Post',
+    },
+    images: ['/images/20261030_mladi_lekari.jfif'],
+  },
+  {
+    id: 'hl7-europe-working-group-malaga-2026',
+    date: '2026-11-16',
+    displayDate: { sk: '16.–20. november 2026', en: 'November 16–20, 2026' },
+    categoryKey: 'EVENT',
+    isUpcoming: true,
+    title: {
+      sk: 'HL7 Europe Working Group Meeting v Malage 2026',
+      en: 'HL7 Europe Working Group Meeting in Málaga 2026',
+    },
+    description: {
+      sk: 'V španielskej Malage sa uskutoční stretnutie HL7 Europe Working Group Meeting, zamerané na formovanie budúcnosti štandardu HL7® FHIR® v Európe. Podujatie prinesie pracovné stretnutia k európskym implementačným príručkám, témam EHDS, sémantickej interoperabilite, praktickému testovaniu a záverečnému podujatiu projektu xShare.',
+      en: 'The HL7 Europe Working Group Meeting in Málaga, Spain, will bring together experts to shape the future of HL7® FHIR® in Europe. The event features working sessions on European implementation guides, EHDS topics, semantic interoperability, hands-on testing, and the xShare project closing event.',
+    },
+    link: 'https://www.hl7europe.eu/hl7-europe-working-group-meeting-malaga-2026/',
+    linkText: {
+      sk: 'Navštíviť stránku podujatia',
+      en: 'Visit Event Website',
+    },
+    images: ['/images/20261116_HL7_Europe_working_group.png'],
+  },
  
 ];
